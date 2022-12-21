@@ -1,6 +1,6 @@
 package programmers;
 public class Lv0_3 {
-        // programmers lv0 겹치는 선분의 길이 문제 정답
+    // programmers lv0 겹치는 선분의 길이 문제 정답
 	// 풀이 총 걸린 시간: 문제 파악&문제 풀이 방향: 6분 코드 작성: 54분
 	// 20221219 23:43PM~00:43PM 
     class Solution {

@@ -1,5 +1,6 @@
 package programmers;
 public class Lv0_2 {
+	//commit내용 변경
 	// programmers lv0 평행 문제 정답
 	// 풀이 총 걸린 시간: 문제 파악&문제 풀이 방향: 10분 코드 작성: 39분
 	// 20221216 23:05PM~23:54PM 

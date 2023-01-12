@@ -21,7 +21,10 @@ public class Lv2_1 {
 			@Override
 			public int compare(String o1, String o2) {
 
+                // 내림차순으로 정렬하고 싶을 때
 				return ((o2 + o1).compareTo(o1 + o2));
+                // 오른차순으로 정렬하고 싶을 때
+                //return ((o1 + o2).compareTo(o1 + o2));
 			}
 		    });
 

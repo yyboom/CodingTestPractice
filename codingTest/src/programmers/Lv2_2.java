@@ -37,11 +37,12 @@ public class Lv2_2 {
         String answer="";
         // 최종 돌아야 하는 배열의 길이만큼 다 돌았을 때
         if(depth==r){
+            int c =0;
             for(int i=0;i<r;i++){
-                if(i==0&&Integer.parseInt(outnumarr[i])==0 && r>1) continue;
-                else{answer+=outnumarr[i];}
+                answer += outnumarr[i];
             }
-            hash.add(answer);
+            String an = Integer.toString(Integer.parseInt(answer)); // 숫자 앞에 0 지워줌
+            hash.add(an);
             return;
         }
 
@@ -59,15 +60,18 @@ public class Lv2_2 {
     // 3. 소수 판별
     public static int isPrime(int n){
         System.out.println("3/1");
+        if(n==0||n==1) return 0;
         for(int i=2;i<=(int)Math.sqrt(n);i++){
-            if(n%i==0) return 0;
+            if(n%i==0){
+                return 0;
+            }
         }
         return 1;
     }
 
     
     public static void main(String args[]) throws Exception {
-        String numbers = "011";
+        String numbers = "0000";
 
         int answer = solution(numbers);
         System.out.println("answer"+answer);

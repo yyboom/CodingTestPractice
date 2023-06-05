@@ -3,6 +3,14 @@ package programmers;
 public class Lv2_8 {
     // 피로도
     // 20230605
+    
+    // -완전탐색-
+    // 1. Brude Force(반복/ 조건문을 활용)
+    // 2. 순열(n개의 원소 중 r개의 원소 중복 허용)
+    // 3. 재귀
+    // 4. 비트마스크(2진수로 표현하여 해결)
+    // 5. BFS,DFS활용
+
     boolean[] visited;
     int answer = 0;
     public int solution(int k, int[][] dungeons) {

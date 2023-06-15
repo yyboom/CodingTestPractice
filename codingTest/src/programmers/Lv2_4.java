@@ -6,6 +6,8 @@ public class Lv2_4 {
 
     // 큰 수 만들기
     // 20230601
+    // 완전 탐색으로는 불가능함
+    // https://born2bedeveloper.tistory.com/27
     static HashSet<Integer> hash;
     public static String solution(String number, int k) {
         String answer = "";
@@ -25,7 +27,7 @@ public class Lv2_4 {
         Collections.sort(al);
 
         // 4. 맨 뒤의 숫자 뽑기
-        answer = Integer.toString(al.get(al.size()));
+        answer = Integer.toString(al.get(al.size()-1));
 
         return answer;
     }

@@ -22,14 +22,22 @@ public class Lv2_18 {
                     sum += truck;
                     time++;
                     break;
-                }else if(queue.size()==bridge_length){
+                }else if(queue.size()==bridge_length){ // 3. 다리 길이만큼 트럭이 다 찬 경우
                     sum -= queue.poll();
-                }else{
-                    
+                }else{ // 4. 다리 길이만큼 트럭이 다 차지 않은 경우
+                    if(sum+truck <= weight){ // weight를 넘지 않는 선에서 추가로 넣어줌.
+                        queue.add(truck);
+                        sum += truck;
+                        time++;
+                        break;
+                    }else{
+                        queue.add(0); // 0을 넣어줌으로써 큐 안에 있는 트럭이 다리를 건너게 함.
+                        time++;
+                    }
                 }
             }
         }
-        return answer;
+        return time+answer;
     }
 
     public static void main(String args[]) throws Exception {
@@ -43,7 +51,7 @@ public class Lv2_18 {
         // int weight = 100;
         // int[] truck_weights = {10,10,10,10,10,10,10,10,10,10};
 
-        int answer = solution(bridge_length,weigh,truck_weights);
+        int answer = solution(bridge_length,weight,truck_weights);
         System.out.println(answer);
     }
 }

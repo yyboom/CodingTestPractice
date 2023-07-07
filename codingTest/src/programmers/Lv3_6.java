@@ -27,12 +27,12 @@ public class Lv3_6 {
             // 2. words에 단어가 있다면 변경이 가능
             int s = 0;
             for(int j=0;j<begin.length();j++){
-                if(begin.charAt(i)==words[i].charAt(j))s++;
+                if(begin.charAt(j)==words[i].charAt(j))s++;
             }
 
             if(s==begin.length()-1){ // 같은 글자가 하나만 다를 때
                 visited[i]=true;
-                dfs(words[i], target, words, ++cnt);
+                dfs(words[i], target, words, cnt+1);
                 visited[i]=false;
             }
         }
